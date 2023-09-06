@@ -28,7 +28,7 @@ return sum;
 }
 
 let start = new Date();
-document.getElementsByTagName("p").innerHTML = recursiveSum(arr) + " ms = "+(new Date().getTime()-start.getTime());
+document.getElementsByTagName("p")[0].innerHTML = recursiveSum(arr) + " ms = "+(new Date().getTime()-start.getTime());
 start = new Date();
 document.getElementsByTagName("p")[0].innerHTML += "\n the sum is = "+ linearSum(arr) + " ms = "+(new Date().getTime()-start.getTime());
 
