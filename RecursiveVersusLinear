@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recursive Versus Linear </title>
+</head>
+<body>
+
+<p>Something went wrong</p>
+
+<script>
+
+let arr = [];
+
+for(let a =0;a<10000;a++) arr.push(Math.floor(Math.random()*100)); 
+
+function recursiveSum(a, index=0){
+
+if(index<a.length){
+return a[index++]+recursiveSum(a,index);
+}
+else return 0;
+}
+
+function linearSum(a){
+let sum = 0;
+for(let i=0;i<a.length;sum+=a[i++]);
+return sum;
+}
+
+let start = new Date();
+document.getElementsByTagName("p").innerHTML = recursiveSum(arr) + " ms = "+(new Date().getTime()-start.getTime());
+start = new Date();
+document.getElementsByTagName("p")[0].innerHTML += "\n the sum is = "+ linearSum(arr) + " ms = "+(new Date().getTime()-start.getTime());
+
+</script>
+
+</body>
+</html>
