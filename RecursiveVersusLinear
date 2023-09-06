@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!-- You may use this algorithm to test whether or not your web browser uses recursive optimization. On this PC the Google Chrome displays both as 0ms, so I assume that means it optimized. The Firefox shows linear is 
+around 1/35th the speed-->
+
 <html>
 <head>
 <title>Recursive Versus Linear </title>
